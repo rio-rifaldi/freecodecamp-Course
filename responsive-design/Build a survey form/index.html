@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			rel="stylesheet"
+			href="style.css"
+		/>
+		<title>Document</title>
+	</head>
+	<body class="bg-slate-700 grid place-items-center h-screen *:text-white *:w-full">
+		<div class="text-center grid gap-5">
+			<h1
+				id="title"
+				class="font-bold text-6xl"
+			>
+				Survey Form
+			</h1>
+			<p
+				id="description"
+				class="italic text-xl"
+			>
+				Thank you for taking the time to help us improve the platform
+			</p>
+		</div>
+		<form
+			action=""
+			id="survey-form"
+			class="bg-slate-950 rounded p-12 max-w-3xl grid gap-4 my-5 --- [&>#input-container]:grid [&>#input-container]:gap-3 --- [&_#input-container>label]:capitalize [&_#input-container>label]:text-lg --- [&_#input-container>input]:bg-white [&_#input-container>input]:py-2 [&_#input-container>input]:px-4 [&_#input-container>input]:rounded [&_#input-container>input]:text-black"
+		>
+			<!-- Input Text -->
+			<div id="input-container">
+				<label
+					for="name"
+					class=""
+					id="name-label"
+					>name</label
+				>
+				<input
+					type="text"
+					name="name"
+					required
+					id="name"
+					placeholder="Enter your name"
+					class=""
+				/>
+			</div>
+			<div id="input-container">
+				<label
+					for="email"
+					class=""
+					id="email-label"
+					>email</label
+				>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					required
+					placeholder="Enter your email"
+					class=""
+				/>
+			</div>
+			<div id="input-container">
+				<label
+					for="age"
+					class=""
+					id="number-label"
+					>age</label
+				>
+				<input
+					type="number"
+					name="age"
+					max="60"
+					min="2"
+					id="number"
+					placeholder="Age"
+					class=""
+				/>
+			</div>
+
+			<!-- Dropdown 1 -->
+			<div id="input-container">
+				<label
+					for="dropdown"
+					class=""
+					id="label"
+					>select your role</label
+				>
+				<select
+					name="dropdown"
+					id="dropdown"
+					class="py-3 px-4 rounded text-slate-500"
+				>
+					<option
+						value=""
+						disabled
+						selected
+						hidden
+						id="placeholder"
+					>
+						Select your role
+					</option>
+					<option value="1">student</option>
+					<option value="2">freelancer</option>
+					<option value="3">fulltime job</option>
+					<option value="3">side job</option>
+				</select>
+			</div>
+
+			<!-- Radio Button -->
+			<div
+				id=""
+				class="[&_div>label]:text-lg [&_div>input]:w-5 [&_div>input]:h-5 [&_div>input]:translate-y-1 [&_div>input]:mr-2"
+			>
+				<p class="text-xl my-3">Would you recommend freeCodeCamp to a friend?</p>
+				<div>
+					<input
+						type="radio"
+						name="radio"
+						value="{1}"
+						id="radio"
+					/>
+					<label for="radio">Definitely</label>
+				</div>
+				<div>
+					<input
+						type="radio"
+						name="radio"
+						id="radio"
+						value="{2}"
+					/>
+
+					<label for="radio">Maybe</label>
+				</div>
+				<div>
+					<input
+						type="radio"
+						name="radio"
+						id="radio"
+						value="{3}"
+					/>
+					<label for="radio">Not sure</label>
+				</div>
+			</div>
+
+			<!-- Dropdown 2 -->
+
+			<div id="input-container">
+				<label
+					for="dropdown"
+					class=""
+					id="label"
+					>What is your favorite feature of freeCodeCamp?</label
+				>
+				<select
+					name="dropdown"
+					id="dropdown"
+					class="py-3 px-4 rounded text-slate-500"
+				>
+					<option
+						value=""
+						disabled
+						selected
+						hidden
+						id="placeholder"
+					>
+						Select an Option
+					</option>
+					<option value="1">Challenges</option>
+					<option value="2">Projects</option>
+					<option value="3">Community</option>
+					<option value="3">Open Source</option>
+				</select>
+			</div>
+
+			<!-- CheckBox -->
+			<div
+				id="input-container"
+				class="[&_div>label]:text-lg [&_div>label]:capitalize --- [&_div>input]:w-5 [&_div>input]:h-5 [&_div>input]:translate-y-1 [&_div>input]:mr-3"
+			>
+				<p class="text-xl text-white">What would you like to see improved? <span class="text-base font-thin">(Check all that apply)</span></p>
+				<div>
+					<input
+						type="checkbox"
+						name="checkbox"
+						value="{1}"
+						id="checkbox"
+					/>
+					<label for="checkbox">front-end projects</label>
+				</div>
+				<div>
+					<input
+						type="checkbox"
+						name="checkbox"
+						id="checkbox"
+						value="{2}"
+					/>
+					<label for="checkbox">back-end projects</label>
+				</div>
+				<div>
+					<input
+						type="checkbox"
+						name="checkbox"
+						id="checkbox"
+						value="{3}"
+					/>
+					<label for="checkbox">data visualization</label>
+				</div>
+				<div>
+					<input
+						type="checkbox"
+						name="checkbox"
+						id="checkbox"
+						value="{4}"
+					/>
+					<label for="checkbox">Challenges</label>
+				</div>
+				<div>
+					<input
+						type="checkbox"
+						name="checkbox"
+						id="checkbox"
+						value="{5}"
+					/>
+					<label for="checkbox">Forum</label>
+				</div>
+			</div>
+
+			<!-- TextArea -->
+			<div id="input-container">
+				<label
+					for="TextArea"
+					class="text-lg text-white capitalize"
+					>any comments or suggestion</label
+				>
+				<textarea
+					name="TextArea"
+					id=""
+					placeholder="Enter your comments here..."
+					cols="30"
+					rows="5"
+					class="placeholder:capitalize py-3 px-4 text-black rounded"
+				></textarea>
+			</div>
+
+			<!-- Button -->
+			<button
+				type="submit"
+				id="submit"
+				class="capitalize bg-green-600 py-3 w-full rounded-md hover:bg-green-800 transition my-4 text-xl"
+			>
+				submit
+			</button>
+		</form>
+	</body>
+</html>
